@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
-import 'package:flutter_permision/widgets/image-notification.dart';
 
+import 'package:flutter_permision/widgets/description-notification.dart';
+import 'package:flutter_permision/widgets/image-notification.dart';
 import 'package:flutter_permision/widgets/title-notification.dart';
+
 class HomePageApp extends StatelessWidget {
 
   @override
@@ -58,33 +60,3 @@ class HomePageApp extends StatelessWidget {
 
 
 
-class DescriptionNotificationContinue extends StatelessWidget{
-
-  Container build(context){
-
-    return Container(
-      
-      alignment:Alignment.center,
-      child: FadeInUp(
-        
-        delay:Duration(milliseconds:1300),
-        child: text()
-      )
-
-    );
-
-  }
-  Text text(){
-
-
-    return Text(
-      'notifications',
-      style: TextStyle(
-        fontWeight: FontWeight.w400,
-        fontSize:21,
-        color: Colors.grey[700]
-      ),
-
-    );
-  }
-}

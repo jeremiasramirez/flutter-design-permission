@@ -31,3 +31,35 @@ class DescriptionNotification extends StatelessWidget{
     );
   }
 }
+
+
+class DescriptionNotificationContinue extends StatelessWidget{
+
+  Container build(context){
+
+    return Container(
+      
+      alignment:Alignment.center,
+      child: FadeInUp(
+        
+        delay:Duration(milliseconds:1300),
+        child: text()
+      )
+
+    );
+
+  }
+  Text text(){
+
+
+    return Text(
+      'notifications',
+      style: TextStyle(
+        fontWeight: FontWeight.w400,
+        fontSize:21,
+        color: Colors.grey[700]
+      ),
+
+    );
+  }
+}
