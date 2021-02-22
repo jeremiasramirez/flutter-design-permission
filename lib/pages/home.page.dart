@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:animate_do/animate_do.dart';
+import 'package:flutter/material.dart'; 
+import 'package:flutter_permision/widgets/button-notification.dart';
 
 import 'package:flutter_permision/widgets/description-notification.dart';
 import 'package:flutter_permision/widgets/image-notification.dart';
@@ -14,12 +14,7 @@ class HomePageApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       
       home:Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.yellow[800],
-          elevation: 0,
-          leading: Icon(Icons.close,color:Colors.black,size:25)
-        ),
-        // backgroundColor: Colors.grey[900],
+
         body: ListView(
           physics: BouncingScrollPhysics(),
           children: [
@@ -33,8 +28,13 @@ class HomePageApp extends StatelessWidget {
 
             safe(DescriptionNotification()),
 
-            safe(DescriptionNotificationContinue())
+            safe(DescriptionNotificationContinue()),
 
+            paddingUp(80),
+            safe(Allow("Allow", Colors.white,Colors.red)),
+           
+            paddingUp(8),
+            safe(Allow("No, other time", Colors.black,Colors.grey[200]))
 
           ],
         )
@@ -56,6 +56,9 @@ class HomePageApp extends StatelessWidget {
 
   }
 }
+
+
+
 
 
 
